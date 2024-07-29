@@ -1,0 +1,9 @@
+POST http://localhost:8080/pacientes/crear HTTP/1.1
+Content-Type: application/json
+
+{
+    "apellidos": "Perea",
+    "nombres": "Jacinto",
+    "fechanacimiento": "1975-12-10",
+    "sexo": "M"
+}

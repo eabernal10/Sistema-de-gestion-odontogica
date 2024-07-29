@@ -1,0 +1,570 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Documentacion",
+    "contact": {},
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "variables": {}
+    }
+  ],
+  "paths": {
+    "/usuarios/1": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "USUARIO(ID)",
+        "operationId": "USUARIO(ID)",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/usuarios": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Lista de usuarios",
+        "operationId": "Listadeusuarios",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/usuarios/crear": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Crear usuarios",
+        "operationId": "Crearusuarios",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CrearusuariosRequest"
+                  },
+                  {
+                    "example": {
+                      "usuario": "alex10",
+                      "clave": "alexander10",
+                      "nombre": "Alexander"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "usuario": "alex10",
+                "clave": "alexander10",
+                "nombre": "Alexander"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/usuarios/login": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Login",
+        "operationId": "Login",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/LoginRequest"
+                  },
+                  {
+                    "example": {
+                      "usuario": "alex10",
+                      "clave": "alexander10"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "usuario": "alex10",
+                "clave": "alexander10"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/tratamientos/1": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "TRATAMIENTOS(ID)",
+        "operationId": "TRATAMIENTOS(ID)",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/pacientes/crear": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Crear pacientes",
+        "operationId": "Crearpacientes",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CrearpacientesRequest"
+                  },
+                  {
+                    "example": {
+                      "apellidos": "Delgado Tapia",
+                      "nombres": "José Roberto",
+                      "edad": "55",
+                      "sexo": "Masculino",
+                      "odontograma": "000"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "apellidos": "Delgado Tapia",
+                "nombres": "José Roberto",
+                "edad": "55",
+                "sexo": "Masculino",
+                "odontograma": "000"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/pacientes": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Lista de pacientes",
+        "operationId": "Listadepacientes",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/pacientes/7": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "PACIENTES(ID)",
+        "operationId": "PACIENTES(ID)",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/pacientes/8": {
+      "put": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Actualizar paciente",
+        "operationId": "Actualizarpaciente",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/ActualizarpacienteRequest"
+                  },
+                  {
+                    "example": {
+                      "idpaciente": 8,
+                      "apellidos": "Delgado Tapia",
+                      "nombres": "José Roberto",
+                      "edad": 55,
+                      "sexo": "Masculino",
+                      "odontograma": "000000000000000000000000000000000000000000000000000"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "idpaciente": 8,
+                "apellidos": "Delgado Tapia",
+                "nombres": "José Roberto",
+                "edad": 55,
+                "sexo": "Masculino",
+                "odontograma": "000000000000000000000000000000000000000000000000000"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/tipos": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Lista de tipos",
+        "operationId": "Listadetipos",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/tipos/4": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "TIPOS(ID)",
+        "operationId": "TIPOS(ID)",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/tratamientos/5": {
+      "get": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "TRATAMIENTOS(ID)1",
+        "operationId": "TRATAMIENTOS(ID)1",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/tratamientos/crear": {
+      "post": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Crear tratamientos",
+        "operationId": "Creartratamientos",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/CreartratamientosRequest"
+                  },
+                  {
+                    "example": {
+                      "fecha": "2024-07-29T05:00:00.000+00:00",
+                      "tratamiento": "Restauracion",
+                      "diagnostico": "Caries en terce molar izquierdo",
+                      "idpaciente": 8,
+                      "idtipo": 3
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "fecha": "2024-07-29T05:00:00.000+00:00",
+                "tratamiento": "Restauracion",
+                "diagnostico": "Caries en terce molar izquierdo",
+                "idpaciente": 8,
+                "idtipo": 3
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/tratamientos/8": {
+      "delete": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "Borrar tratamientos",
+        "operationId": "Borrartratamientos",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "CrearusuariosRequest": {
+        "title": "CrearusuariosRequest",
+        "required": [
+          "usuario",
+          "clave",
+          "nombre"
+        ],
+        "type": "object",
+        "properties": {
+          "usuario": {
+            "type": "string"
+          },
+          "clave": {
+            "type": "string"
+          },
+          "nombre": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "usuario": "alex10",
+          "clave": "alexander10",
+          "nombre": "Alexander"
+        }
+      },
+      "LoginRequest": {
+        "title": "LoginRequest",
+        "required": [
+          "usuario",
+          "clave"
+        ],
+        "type": "object",
+        "properties": {
+          "usuario": {
+            "type": "string"
+          },
+          "clave": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "usuario": "alex10",
+          "clave": "alexander10"
+        }
+      },
+      "CrearpacientesRequest": {
+        "title": "CrearpacientesRequest",
+        "required": [
+          "apellidos",
+          "nombres",
+          "edad",
+          "sexo",
+          "odontograma"
+        ],
+        "type": "object",
+        "properties": {
+          "apellidos": {
+            "type": "string"
+          },
+          "nombres": {
+            "type": "string"
+          },
+          "edad": {
+            "type": "string"
+          },
+          "sexo": {
+            "type": "string"
+          },
+          "odontograma": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "apellidos": "Delgado Tapia",
+          "nombres": "José Roberto",
+          "edad": "55",
+          "sexo": "Masculino",
+          "odontograma": "000"
+        }
+      },
+      "ActualizarpacienteRequest": {
+        "title": "ActualizarpacienteRequest",
+        "required": [
+          "idpaciente",
+          "apellidos",
+          "nombres",
+          "edad",
+          "sexo",
+          "odontograma"
+        ],
+        "type": "object",
+        "properties": {
+          "idpaciente": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "apellidos": {
+            "type": "string"
+          },
+          "nombres": {
+            "type": "string"
+          },
+          "edad": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "sexo": {
+            "type": "string"
+          },
+          "odontograma": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "idpaciente": 8,
+          "apellidos": "Delgado Tapia",
+          "nombres": "José Roberto",
+          "edad": 55,
+          "sexo": "Masculino",
+          "odontograma": "000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "CreartratamientosRequest": {
+        "title": "CreartratamientosRequest",
+        "required": [
+          "fecha",
+          "tratamiento",
+          "diagnostico",
+          "idpaciente",
+          "idtipo"
+        ],
+        "type": "object",
+        "properties": {
+          "fecha": {
+            "type": "string"
+          },
+          "tratamiento": {
+            "type": "string"
+          },
+          "diagnostico": {
+            "type": "string"
+          },
+          "idpaciente": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "idtipo": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "fecha": "2024-07-29T05:00:00.000+00:00",
+          "tratamiento": "Restauracion",
+          "diagnostico": "Caries en terce molar izquierdo",
+          "idpaciente": 8,
+          "idtipo": 3
+        }
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Misc",
+      "description": ""
+    }
+  ]
+}
